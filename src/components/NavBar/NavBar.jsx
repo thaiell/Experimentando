@@ -2,7 +2,7 @@ import CartWidget from "../CartWidget/CartWidget"
 import "./NavBar.css"
 import { Link, NavLink } from "react-router-dom"
 import { Container, Navbar, Nav } from "react-bootstrap"
-
+import UserWidget from "../../UserWidget/UserWidget"
 
 
 const NavBar = () => {
@@ -30,7 +30,8 @@ const NavBar = () => {
 <NavLink className="navLink py-4 px-4" to={"/category/winter"}> Invierno </NavLink>
               
                     </Nav>
-               
+
+<UserWidget />               
 <CartWidget />
 
             </Container>

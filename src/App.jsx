@@ -6,11 +6,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart/Cart"
 import { CarritoProvider } from "./context/CarritoContext"
 import { ToastContainer } from "react-toastify"
+import { AuthProvider } from "./context/AuthContext"
+
 function App() {
 
 
   return (
     <>
+    <AuthProvider>
   <CarritoProvider>
     <ToastContainer pauseOnFocusLoss={false}/>
     <BrowserRouter>
@@ -24,6 +27,7 @@ function App() {
        </Routes> 
     </BrowserRouter>
   </CarritoProvider>
+  </AuthProvider>
     </>
   )
 }
